@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <title>FREDDY JOHN</title>
 <link rel="icon" href="images/fj-logo.jpg" type="image/gif" sizes="16x16">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h4>director- co-ordinator - photographer - freelancer</h4>
 					<p class="mt-4"> The way I see it, if you want the rainbow, you gotta put up with the rain.</p>
 					<ul class="social_section_1info mt-4">
-						<li class="mb-2 facebook"><a href="https://www.facebook.com/login/"><span class="fa fa-facebook"></span></a></li>
+						<li class="mb-2 facebook"><a href="https://www.facebook.com/freddy.john.902"><span class="fa fa-facebook"></span></a></li>
 						<li class="linkedin"><a href="https://ae.linkedin.com/in/freddy-john-b88285213?trk=public_profile_samename-profile"><span class="fa fa-linkedin"></span></a></li>
 						<li class="instagram"><a href="https://www.instagram.com/accounts/login/"><span class="fa fa-instagram"></span></a></li>
 					</ul>
@@ -166,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<img src="images/phtography.jpg" alt="" class="img-fluid" />
 					<h3>02</h3>
 					<h4 class="mt-3">Photographic and Editing</h4>
-					<p class="mt-3 text-justify">I feel that working with the camera and editing it is actually my strong suit.</p><br>
+					<p class="mt-3 text-justify">I feel that working with the camera and editing it is actually my strong suit.</p><br><br><br>
 				  </div>
 				</div>
 			</div>
@@ -253,7 +254,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<a href="https://www.youtube.com/watch?v=PxA_fbHhRkE" class="primary-outline-btn">Click Here</a>
 											</li>	<br><br>
 											<li> SUNDHARANUM SUMUKHANUM-malayalam Short-film.<br><br>
-												<a href="https://www.youtube.com/watch?v=PxA_fbHhRkE" class="primary-outline-btn">Click Here</a>
+												<a href="https://www.youtube.com/watch?v=486tbC_ch08" class="primary-outline-btn">Click Here</a>
 											</li>	
 										</ol>
 											<!--<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor
@@ -358,7 +359,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="col-lg-3 col-md-4 col-6 p-0">
 			<!--<div class="box9">-->
-					<img src="images/mypic5.jpg" alt="image" class="img-fluid" />
+					<img src="images/image6.JPG" alt="image" class="img-fluid" />
 					<!--<div class="box-content">
 						<h3 class="title">Portfolio 4</h3>
 						<ul class="icon">
@@ -370,7 +371,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="col-lg-3 col-md-4 col-6 p-0">
 		<!--<div class="box9">-->
-					<img src="images/my12.JPG" alt="image" class="img-fluid" />
+					<img src="images/image5.JPG" alt="image" class="img-fluid" />
 					<!--<div class="box-content">
 						<h3 class="title">Portfolio 5</h3>
 						<ul class="icon">
@@ -471,7 +472,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="contact-form">
 			<div class="row">
 				<div class="col-lg-8">
-					<form name="contactform" id="contactform" method="post" action="#" >
+					<form name="gform" id="submit-form" action="" >
 						<div class="row">
 							<div class="form-group col-md-6 ">
 							  <label>Name</label>
@@ -487,11 +488,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="form-group col-md-6">
 							  <label>Subject</label>
-							  <input type="text" class="form-control" id="subject" placeholder="Enter Subject" name="phone">
+							  <input type="text" class="form-control" id="subject" placeholder="Enter Subject" name="subject">
 							</div>
 							<div class="form-group col-12">
 							  <label>Message</label>
-							  <textarea name="issues" class="form-control" id="iq" placeholder="Enter Your Message Here"></textarea>
+							  <textarea name="message" class="form-control" id="iq" placeholder="Enter Your Message Here"></textarea>
 							</div>				
 							<button type="submit" class="btn btn-default">Submit </button>
 						</div>
@@ -551,6 +552,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</a>
 </div>
 <!-- move top -->
+
+<script>
+	$("#submit-form").submit((e)=>{
+					e.preventDefault()
+					$.ajax({
+									url:"https://script.google.com/macros/s/AKfycbwExl9ooMdJW2I_a1dccDSXXW7VYmJlxoWBrH5xDGS6SynlXnxaQ9x-TDdAlOOzGhpyAg/exec",
+									data:$("#submit-form").serialize(),
+									method:"post",
+									success:function (response){
+													alert("Form submitted successfully")
+													window.location.reload()
+													//window.location.href="https://google.com"
+									},
+									error:function (err){
+													alert("Something Error")
+
+									}
+					})
+	})
+</script>
 
 </body>
 </html>
